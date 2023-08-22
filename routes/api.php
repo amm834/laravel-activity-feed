@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
+// user -> activityLogs -> action -> post -> user
+//                                 -> comments -> user
+//                                            -> replies -> user
 Route::get('/', function () {
     $user = User::find(1)
         ->activityLogs()
